@@ -6,13 +6,17 @@ import {
 } from 'react-router-dom';
 
 import Landing from './components/Landing';
+import Search from './components/Search';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/'>
+        <Route path='/' exact>
           <Landing />
+        </Route>
+        <Route path='/search' exact>
+          <Search />
         </Route>
       </Switch>
     </Router>
