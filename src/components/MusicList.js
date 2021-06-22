@@ -19,9 +19,11 @@ export default function MusicList(props) {
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0 10px',
-          }}>
+          }} key={mu._id}>
             <MusicInfo info={mu.info} />
-            <MusicCovers covers={mu.cover} />
+            {mu.cover ? (
+              <MusicCovers covers={mu.cover} />
+            ) : <></>}
           </Paper>
         )
       })}
