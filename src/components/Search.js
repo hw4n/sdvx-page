@@ -9,15 +9,19 @@ export default function Search() {
   const [title, setTitle] = useState('');
   const [result, setResult] = useState([]);
   const handleInput = (event) => {
-    setTitle(event.target.value.trim());
+    if (title !== event.target.value.trim()) {
+      setTitle(event.target.value.trim());
+    }
   }
 
   useEffect(() => {
-    if (title) {
+    if (title.length) {
       axios.get('https://api.sdvx.org/v1', {
         params: { title }
       }).then((response) => {
-        setResult(response.data);
+        if (response.config.params.title === title) {
+          setResult(response.data);
+        }
       });
     }
   }, [title]);
