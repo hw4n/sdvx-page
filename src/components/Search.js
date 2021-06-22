@@ -17,15 +17,19 @@ export default function Search() {
   }
 
   useEffect(() => {
-    if (title.length) {
-      axios.get('https://api.sdvx.org/v1', {
-        params: { title }
-      }).then((response) => {
-        if (response.config.params.title === title) {
-          setResult(response.data);
-        }
-      });
-    }
+    // wait 3 seconds after user input, prevent requesting by each character
+    const timeout = setTimeout(() => {
+      if (title.length) {
+        axios.get('https://api.sdvx.org/v1', {
+          params: { title }
+        }).then((response) => {
+          if (response.config.params.title === title) {
+            setResult(response.data);
+          }
+        });
+      }
+    }, 3000);
+    return () => clearTimeout(timeout);
   }, [title]);
 
   return (
