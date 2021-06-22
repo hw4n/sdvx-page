@@ -1,0 +1,9 @@
+#musicList {
+  height: 95%;
+  overflow-y: scroll;
+}
+
+.covers {
+  display: flex;
+  align-items: center;
+}

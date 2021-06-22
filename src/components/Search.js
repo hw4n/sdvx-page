@@ -5,6 +5,8 @@ import { TextField } from '@material-ui/core';
 
 import axios from 'axios';
 
+import MusicList from './MusicList';
+
 export default function Search() {
   const [title, setTitle] = useState('');
   const [result, setResult] = useState([]);
@@ -30,6 +32,7 @@ export default function Search() {
     <div id='container'>
       <div id='innerContainer'>
         <TextField label='Title' style={{ width: '100%' }} onInput={handleInput} />
+        <MusicList music={result} />
       </div>
     </div>
   )
