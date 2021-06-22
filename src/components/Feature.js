@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { Typography, Paper, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 export default function Feature(props) {
-  const { Icon, title, desc, hrefTo, buttonContent } = props;
+  const { Icon, title, desc, hrefTo, linkTo, buttonContent } = props;
   return (
     <Paper style={{
       width: 250,
@@ -25,6 +26,15 @@ export default function Feature(props) {
           <Button variant="contained" color="primary" href={hrefTo}>
             {buttonContent}
           </Button>
+        ) : (
+          <></>
+        )}
+        {linkTo ? (
+          <Link to={linkTo}>
+            <Button variant="contained" color="primary" style={{width: '100%'}}>
+              {buttonContent}
+            </Button>
+          </Link>
         ) : (
           <></>
         )}

@@ -3,7 +3,7 @@ import './Landing.css';
 import Feature from './Feature';
 
 import { Typography, Grid } from '@material-ui/core';
-import { Public, Image, Code } from '@material-ui/icons';
+import { Public, Image, Code, Search } from '@material-ui/icons';
 
 export default function Landing() {
   return (
@@ -37,6 +37,14 @@ export default function Landing() {
               desc='Same repo is stored on github, check usages and others too! Any contribution is welcome and encouraged.'
               hrefTo='https://github.com/hw4n/sdvx-music-api'
               buttonContent='Check it out'/>
+          </Grid>
+          <Grid item>
+            <Feature
+              Icon={Search}
+              title='Live searching'
+              desc='Just wanna search music? Search here!'
+              linkTo='/search'
+              buttonContent='start searching'/>
           </Grid>
         </Grid>
       </div>
