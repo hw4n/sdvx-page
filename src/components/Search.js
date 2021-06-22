@@ -1,9 +1,32 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import './Search.css';
+
+import { TextField } from '@material-ui/core';
+
+import axios from 'axios';
 
 export default function Search() {
+  const [title, setTitle] = useState('');
+  const [result, setResult] = useState([]);
+  const handleInput = (event) => {
+    setTitle(event.target.value.trim());
+  }
+
+  useEffect(() => {
+    if (title) {
+      axios.get('https://api.sdvx.org/v1', {
+        params: { title }
+      }).then((response) => {
+        setResult(response.data);
+      });
+    }
+  }, [title]);
+
   return (
-    <div>
-      
+    <div id='container'>
+      <div id='innerContainer'>
+        <TextField label='Title' style={{ width: '100%' }} onInput={handleInput} />
+      </div>
     </div>
   )
 }
