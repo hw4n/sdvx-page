@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
 }
 
 .music .coverWrapper {
@@ -58,4 +57,36 @@
 
 .vivid {
   background-color: #ff0080 !important;
+}
+
+.musicInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.booth {
+  border-left: 10px solid #1c63ff;
+}
+
+.infiniteInfection {
+  border-left: 10px solid #dd00dc;
+}
+
+.gravityWars {
+  border-left: 10px solid #ff7300;
+}
+
+.heavenlyHaven {
+  border-left: 10px solid #0077ff;
+}
+
+.vividWave {
+  border-left: 10px solid #ff0080;
+}
+
+.exceedGear {
+  border-left: 10px solid #0f0f0f;
 }
