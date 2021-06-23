@@ -1,27 +1,37 @@
 import React from 'react'
+import MusicCover from './MusicCover';
 
 export default function MusicCovers(props) {
-  const { novice, advanced, exhaust, infinite, maximum } = props.covers;
+  const { novice: novCover, advanced: advCover, exhaust: exhCover, infinite: infCover, maximum: mxmCover } = props.covers;
+  const { novice, advanced, exhaust, infinite, maximum } = props.difficulty;
+  const { infVersion } = props;
   const coverURL = (dir) => {
     return 'https://api.sdvx.org' + dir;
   }
 
+  const infName = {
+    2: 'infinite',
+    3: 'gravity',
+    4: 'heavenly',
+    5: 'vivid'
+  }
+
   return (
     <div className='covers'>
-      {novice ? (
-        <img src={coverURL(novice.s)} alt='novice cover' />
+      {novCover && novice ? (
+        <MusicCover src={coverURL(novCover.s)} difname='novice' dif={novice.difnum} />
       ) : <></> }
-      {advanced ? (
-        <img src={coverURL(advanced.s)} alt='advanced cover' />
+      {advCover && advanced ? (
+        <MusicCover src={coverURL(advCover.s)} difname='advanced' dif={advanced.difnum} />
       ) : <></> }
-      {exhaust ? (
-        <img src={coverURL(exhaust.s)} alt='exhaust cover' />
+      {exhCover && exhaust ? (
+        <MusicCover src={coverURL(exhCover.s)} difname='exhaust' dif={exhaust.difnum} />
       ) : <></> }
-      {infinite ? (
-        <img src={coverURL(infinite.s)} alt='inf/grv/hvn/vvd cover' />
+      {infCover && infinite ? (
+        <MusicCover src={coverURL(infCover.s)} difname={infName[infVersion]} dif={infinite.difnum} />
       ) : <></> }
-      {maximum ? (
-        <img src={coverURL(maximum.s)} alt='maximum cover' />
+      {mxmCover && maximum ? (
+        <MusicCover src={coverURL(mxmCover.s)} difname='maximum' dif={maximum.difnum} />
       ) : <></> }
     </div>
   )

@@ -8,3 +8,54 @@
   display: flex;
   align-items: center;
 }
+
+.music {
+  background-color: transparent !important;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.music .coverWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.difficulty {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.novice {
+  background-color: #da7dff !important;
+}
+
+.advanced {
+  background-color: #ffd900 !important;
+}
+
+.exhaust {
+  background-color: #ff2c2c !important;
+}
+
+.maximum {
+  background-color: #969696 !important;
+}
+
+.infinite {
+  background-color: #dd00dc !important;
+}
+
+.gravity {
+  background-color: #ff7300 !important;
+}
+
+.heavenly {
+  background-color: #0077ff !important;
+}
+
+.vivid {
+  background-color: #ff0080 !important;
+}

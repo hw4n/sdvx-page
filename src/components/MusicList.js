@@ -12,17 +12,10 @@ export default function MusicList(props) {
     <div id='musicList'>
       {music.map(mu => {
         return (
-          <Paper square style={{
-            backgroundColor: 'transparent',
-            height: 128,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '0 10px',
-          }} key={mu._id}>
+          <Paper square className='music' key={mu._id}>
             <MusicInfo info={mu.info} />
-            {mu.cover ? (
-              <MusicCovers covers={mu.cover} />
+            {mu.cover && mu.difficulty ? (
+              <MusicCovers covers={mu.cover} difficulty={mu.difficulty} infVersion={mu.info.inf_ver} />
             ) : <></>}
           </Paper>
         )
