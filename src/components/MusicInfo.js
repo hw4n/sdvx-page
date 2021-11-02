@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 export default function MusicInfo(props) {
   const { title_name, artist_name, distribution_date, bpm_min, bpm_max, version } = props.info;

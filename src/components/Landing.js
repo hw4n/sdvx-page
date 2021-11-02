@@ -2,8 +2,8 @@ import React from 'react'
 import './Landing.css';
 import Feature from './Feature';
 
-import { Typography, Grid } from '@material-ui/core';
-import { Public, Image, Code, Search } from '@material-ui/icons';
+import { Typography, Grid } from '@mui/material';
+import { Public, Image, Code, Search } from '@mui/icons-material';
 
 export default function Landing() {
   return (

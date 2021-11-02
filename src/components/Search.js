@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Search.css';
 
-import { TextField } from '@material-ui/core';
+import { TextField } from '@mui/material';
 
 import axios from 'axios';
 

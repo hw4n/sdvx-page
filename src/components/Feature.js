@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Typography, Paper, Button } from '@material-ui/core';
+import { Typography, Paper, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default function Feature(props) {
