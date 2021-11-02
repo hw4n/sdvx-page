@@ -36,6 +36,10 @@
 
 .music .title {
   height: 1.5em;
+}
+
+.music .title,
+.music .artist {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -55,7 +59,7 @@
 }
 
 .difficulty {
-  font-size: .9em;
+  font-size: .75em;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
