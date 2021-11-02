@@ -25,11 +25,9 @@ export default function MusicInfo({ music }) {
 
   return (
     <div className={`music ${introduced[version]}`}>
-      <Typography>{title_name}</Typography>
-      <Typography>{artist_name}</Typography>
+      <Typography className="title">{title_name}</Typography>
+      <Typography className="artist">{artist_name}</Typography>
       <Difficulty difficulty={music.difficulty} inf_ver={inf_ver}/>
-      {/* <Typography>{datestr(distribution_date)}</Typography> */}
-      {/* <Typography>BPM {bpmstr(bpm_min, bpm_max)}</Typography> */}
     </div>
   )
 }
