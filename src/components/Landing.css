@@ -12,10 +12,11 @@
 }
 
 #container {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../images/bg_sdvx.png'), url('../images/body-bg1.png'), url('../images/bg_main02.png');
   background-repeat: no-repeat, repeat, repeat;
   background-position: center, top left, top left;
+  background-attachment: fixed;
 }
 
 .typographies {
