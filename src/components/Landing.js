@@ -15,7 +15,7 @@ export default function Landing() {
         </div>
       </div>
       <div id='container2'>
-        <Grid container justify='center'>
+        <Grid container justifyContent='center'>
           <Grid item>
             <Feature
               Icon={Public}
