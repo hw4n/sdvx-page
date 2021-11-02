@@ -54,9 +54,6 @@ function Header({ searchKeyword, setSearchKeyword }) {
   return (
     <AppBar>
       <Toolbar>
-        <IconButton color="inherit" aria-label="Open drawer">
-          <MenuIcon />
-        </IconButton>
         <Typography
             variant="h6"
             noWrap
