@@ -17,7 +17,7 @@ export default function MusicList(props) {
             <Card sx={{ display: 'flex' }}>
               <CardMedia
                 component="img"
-                sx={{ height: '120px', width: '120px' }}
+                sx={{ height: '100px', width: '100px' }}
                 image={`https://api.sdvx.org${m.cover.novice.s}`}
                 alt={m.info.title_name}
               />
