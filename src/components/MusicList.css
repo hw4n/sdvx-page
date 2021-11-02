@@ -8,17 +8,16 @@
   align-items: center;
 }
 
-.music {
-  background-color: transparent !important;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.musicInfoWrapper {
+  width: 100%;
 }
 
-.music .coverWrapper {
+.music {
+  height: 100%;
+  padding-left: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .difficulty {
@@ -58,34 +57,26 @@
   background-color: #ff0080 !important;
 }
 
-.musicInfo {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-}
-
 .booth {
-  border-left: 10px solid #1c63ff;
+  border-right: 8px solid #1c63ff;
 }
 
 .infiniteInfection {
-  border-left: 10px solid #dd00dc;
+  border-right: 8px solid #dd00dc;
 }
 
 .gravityWars {
-  border-left: 10px solid #ff7300;
+  border-right: 8px solid #ff7300;
 }
 
 .heavenlyHaven {
-  border-left: 10px solid #0077ff;
+  border-right: 8px solid #0077ff;
 }
 
 .vividWave {
-  border-left: 10px solid #ff0080;
+  border-right: 8px solid #ff0080;
 }
 
 .exceedGear {
-  border-left: 10px solid #0f0f0f;
+  border-right: 8px solid #0f0f0f;
 }

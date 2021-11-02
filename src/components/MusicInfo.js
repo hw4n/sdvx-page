@@ -23,11 +23,11 @@ export default function MusicInfo(props) {
   }
 
   return (
-    <div className={`musicInfo ${introduced[version]}`}>
+    <div className={`music ${introduced[version]}`}>
       <Typography>{title_name}</Typography>
       <Typography>{artist_name}</Typography>
       <Typography>{datestr(distribution_date)}</Typography>
-      <Typography>BPM {bpmstr(bpm_min, bpm_max)}</Typography>
+      {/* <Typography>BPM {bpmstr(bpm_min, bpm_max)}</Typography> */}
     </div>
   )
 }

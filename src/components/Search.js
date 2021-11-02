@@ -42,13 +42,11 @@ export default function Search() {
     <>
       <Header searchKeyword={searchKeyword} setSearchKeyword={setSearchKeyword} />
       <div id='container'>
-        <div id='content'>
-          { loading ? (
-            <Loader />
-          ) : (
-            <MusicList music={result} />
-          )}
-        </div>
+        { loading ? (
+          <Loader />
+        ) : (
+          <MusicList music={result} />
+        )}
       </div>
     </>
   )
