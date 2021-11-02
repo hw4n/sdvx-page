@@ -21,6 +21,19 @@
   justify-content: center;
 }
 
+.textInfo {
+  display: flex;
+}
+
+.textInfo .left {
+  width: 70%;
+}
+
+.textInfo .right {
+  flex-grow: 1;
+  text-align: right;
+}
+
 .music .title {
   height: 1.5em;
   white-space: nowrap;
@@ -28,7 +41,8 @@
   text-overflow: ellipsis;
 }
 
-.music .artist {
+.music .artist,
+.music .date {
   font-size: .8em;
   color: #757575;
 }
