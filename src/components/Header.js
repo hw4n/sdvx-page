@@ -46,7 +46,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function Header() {
+function Header({ searchKeyword, setSearchKeyword }) {
+  function handleSearch(e) {
+    setSearchKeyword(e.target.value);
+  }
+
   return (
     <AppBar>
       <Toolbar>
@@ -61,7 +65,7 @@ function Header() {
           >
           SDVX
         </Typography>
-        <Search>
+        <Search value={searchKeyword} onChange={handleSearch}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>

@@ -7,7 +7,6 @@ import {
 
 import Landing from './components/Landing';
 import Search from './components/Search';
-import Header from './components/Header';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Landing />
         </Route>
         <Route path='/search' exact>
-          <Header />
           <Search />
         </Route>
       </Switch>
