@@ -22,7 +22,7 @@ export default function MusicList(props) {
                 alt={m.info.title_name}
               />
               <div className="musicInfoWrapper">
-                <MusicInfo info={m.info} />
+                <MusicInfo music={m} />
               </div>
             </Card>
           </Grid>

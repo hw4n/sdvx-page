@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { Typography } from '@mui/material';
+import Difficulty from './Difficulty';
 
-export default function MusicInfo(props) {
-  const { title_name, artist_name, distribution_date, bpm_min, bpm_max, version } = props.info;
+export default function MusicInfo({ music }) {
+  const { title_name, artist_name, distribution_date, bpm_min, bpm_max, version, inf_ver } = music.info;
 
   const datestr = (date) => {
     return `${date.substr(0, 4)}/${date.substr(4, 2)}/${date.substr(6, 2)}`;
@@ -26,7 +27,8 @@ export default function MusicInfo(props) {
     <div className={`music ${introduced[version]}`}>
       <Typography>{title_name}</Typography>
       <Typography>{artist_name}</Typography>
-      <Typography>{datestr(distribution_date)}</Typography>
+      <Difficulty difficulty={music.difficulty} inf_ver={inf_ver}/>
+      {/* <Typography>{datestr(distribution_date)}</Typography> */}
       {/* <Typography>BPM {bpmstr(bpm_min, bpm_max)}</Typography> */}
     </div>
   )

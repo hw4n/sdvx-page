@@ -14,13 +14,20 @@
 
 .music {
   height: 100%;
-  padding-left: 1em;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.difficulties {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .difficulty {
+  display: inline-block;
   text-align: center;
   text-transform: uppercase;
 }
