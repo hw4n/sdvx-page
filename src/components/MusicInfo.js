@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Typography } from '@mui/material';
 import Difficulty from './Difficulty';
+import { halfToFull, lineOf } from '../helper/japanese';
 
 export default function MusicInfo({ music }) {
   const { title_name, artist_name, distribution_date, bpm_min, bpm_max, version, inf_ver, title_yomigana } = music.info;
@@ -23,12 +24,7 @@ export default function MusicInfo({ music }) {
     6: 'exceedGear',
   }
 
-  const halfWidths = 'ｧｨｩｪｫｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁｯﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓｬｭｮﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝｦ';
-  const fullWidths = 'ァィゥェォアイウエオカキクケコサシスセソタチッツテトナニヌネノハヒフヘホマミムメモャュョヤユヨラリルレロワンヲ';
-
-  function halfToFull(str) {
-    return fullWidths[halfWidths.indexOf(str)];
-  };
+  const firstKatakana = halfToFull(title_yomigana[0]);
 
   return (
     <div className={`music ${introduced[version]}`}>
@@ -38,7 +34,7 @@ export default function MusicInfo({ music }) {
           <Typography className="artist">{artist_name}</Typography>
         </div>
         <div className="right">
-        <Typography className="yomigana">{halfToFull(title_yomigana[0])}</Typography>
+        <Typography className="yomigana">{lineOf(firstKatakana)} - {firstKatakana}</Typography>
           <Typography className="date">{datestr(distribution_date)}</Typography>
         </div>
       </div>
