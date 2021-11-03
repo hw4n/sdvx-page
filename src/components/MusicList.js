@@ -18,7 +18,7 @@ export default function MusicList(props) {
     <Grid container xs={12} spacing={2} justifyContent='center'>
       {music.map(m => {
         return (
-          <Grid item xs={11} md={5} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ display: 'flex' }}>
               <CardMedia
                 component="img"
