@@ -31,6 +31,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .textInfo {
@@ -111,24 +113,36 @@
 
 .booth {
   border-right: 8px solid var(--color-booth);
+  background-image: url('../images/booth.png');
+  background-size: 35%;
 }
 
 .infiniteInfection {
   border-right: 8px solid var(--color-infinite);
+  background-image: url('../images/infinite.png');
+  background-size: 22%;
 }
 
 .gravityWars {
   border-right: 8px solid var(--color-gravity);
+  background-image: url('../images/gravity.png');
+  background-size: 25%;
 }
 
 .heavenlyHaven {
   border-right: 8px solid var(--color-heavenly);
+  background-image: url('../images/heavenly.png');
+  background-size: 22%;
 }
 
 .vividWave {
   border-right: 8px solid var(--color-vivid);
+  background-image: url('../images/vivid.png');
+  background-size: 25%;
 }
 
 .exceedGear {
   border-right: 8px solid #0f0f0f;
+  background-image: url('../images/exceed.png');
+  background-size: 25%;
 }

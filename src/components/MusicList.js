@@ -6,6 +6,15 @@ import MusicInfo from './MusicInfo';
 import MusicCovers from './MusicCovers';
 import { styled } from '@mui/material/styles';
 
+const introduced = {
+  1: 'booth',
+  2: 'infiniteInfection',
+  3: 'gravityWars',
+  4: 'heavenlyHaven',
+  5: 'vividWave',
+  6: 'exceedGear',
+}
+
 export default function MusicList(props) {
   const { music } = props;
 
