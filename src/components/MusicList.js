@@ -9,6 +9,11 @@ import { styled } from '@mui/material/styles';
 export default function MusicList(props) {
   const { music } = props;
 
+  function lastCover(cover) {
+    const values = Object.values(cover);
+    return values[values.length-1].s;
+  }
+
   return (
     <Grid container xs={12} spacing={2} justifyContent='center'>
       {music.map(m => {
@@ -27,7 +32,7 @@ export default function MusicList(props) {
                   sm: '100px',
                   lg: '120px',
                 }}}
-                image={`https://api.sdvx.org${m.cover.novice.s}`}
+                image={`https://api.sdvx.org${lastCover(m.cover)}`}
                 alt={m.info.title_name}
               />
               <div className="musicInfoWrapper">
